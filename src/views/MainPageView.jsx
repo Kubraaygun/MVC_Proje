@@ -1,7 +1,7 @@
 import millify from "millify";
 import { FaBitcoin } from "react-icons/fa6";
 
-const MainPageView = ({ coins }) => {
+const MainPageView = ({ coins,setPage }) => {
   console.log(coins[0]);
   return (
     <div className="container-xl mt-5">
@@ -43,6 +43,14 @@ const MainPageView = ({ coins }) => {
           ))}
         </tbody>
       </table>
+
+
+{/**Daha Fazla Butonu */}
+<div className="d-flex my-5 justify-content-center">
+  <button onClick={()=>setPage((page)=>page+1)} className="button2"> Daha Fazla </button>
+</div>
+
+
     </div>
   );
 };
