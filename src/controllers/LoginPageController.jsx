@@ -3,14 +3,14 @@ import { schema } from "../schema";
 import LoginPageView from "../views/LoginPageView";
 
 const LoginPageController = () => {
-      //Formik'in butun ozelliklerini kullanmamizi saglayan hook
+  //Formik'in butun ozelliklerini kullanmamizi saglayan hook
   const formik = useFormik({
     //formda tutulacak verilerin ilk degeri
     initialValues: {
       email: "",
       age: "",
-      password:"",
-      confirmPassword:"",
+      password: "",
+      confirmPassword: "",
     },
 
     //Validasyon semasi
@@ -24,12 +24,10 @@ const LoginPageController = () => {
     //2-formda calistirabilecegimiz aksiyonlari alir
 
     onSubmit: (values, actions) => {
-      console.log(actions);
+      //console.log(actions);
     },
   });
-  return (
-  <LoginPageView formik={formik}/>
-  )
-}
+  return <LoginPageView formik={formik} />;
+};
 
-export default LoginPageController
+export default LoginPageController;
