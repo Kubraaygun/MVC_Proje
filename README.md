@@ -10,4 +10,4 @@ millify# MVC_Proje
 
 
 Kaynak
-API:https://docs.coincap.io/
+API: https://docs.coincap.io/
