@@ -168,3 +168,15 @@ form div {
   box-shadow: 0 0 30px gray;
   transform: translate(10px, -10px);
 }
+
+/*Kart Css*/
+
+.coin-card{
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.coin-card:hover{
+  box-shadow: 0 0 30px gray;
+  transform: translate(10px,-10px );
+}

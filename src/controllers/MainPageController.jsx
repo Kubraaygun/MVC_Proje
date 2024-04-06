@@ -5,8 +5,10 @@ import { useEffect, useState } from "react"
 const MainPageController = () => {
   const [coins,setCoins]=useState([])
   const [page,setPage]=useState(1)
+
+
   useEffect(()=>{
-  model.getCoins(page).then((data)=>setCoins(data))
+  model.getCoins(page).then((data)=>setCoins(coins.concat(data)))
   },[page])
  
    return ( <MainPageView coins={coins} setPage={setPage}/>

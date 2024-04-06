@@ -1,7 +1,8 @@
 import millify from "millify";
 import { FaBitcoin } from "react-icons/fa6";
+import CardView from "./CardView";
 
-const MainPageView = ({ coins,setPage }) => {
+const MainPageView = ({ coins, setPage }) => {
   console.log(coins[0]);
   return (
     <div className="container-xl mt-5">
@@ -13,6 +14,15 @@ const MainPageView = ({ coins,setPage }) => {
         Coin Listesi, dünya genelindeki kripto para birimlerini ve dijital
         varlıkları takip etmek için mükemmel bir kaynaktır
       </p>
+ 
+{/*KARTLAR */}
+
+      <div className="d-flex gap-4 justify-content-around my-6">
+        {coins.slice(0, 3).map((data) => (
+          <CardView data={data} />
+        ))}
+      </div>
+{/*Tablo */}
       <table className="table table-dark table-hover table-responsive mt-5">
         <thead>
           <tr>
@@ -44,13 +54,13 @@ const MainPageView = ({ coins,setPage }) => {
         </tbody>
       </table>
 
-
-{/**Daha Fazla Butonu */}
-<div className="d-flex my-5 justify-content-center">
-  <button onClick={()=>setPage((page)=>page+1)} className="button2"> Daha Fazla </button>
-</div>
-
-
+      {/**Daha Fazla Butonu */}
+      <div className="d-flex my-5 justify-content-center">
+        <button onClick={() => setPage((page) => page + 1)} className="button2">
+          {" "}
+          Daha Fazla{" "}
+        </button>
+      </div>
     </div>
   );
 };
