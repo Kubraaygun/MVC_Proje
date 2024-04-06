@@ -36,6 +36,21 @@ export default class DetailModel {
         value: coin?.detail.volumeUsd24Hr,
       },
     ];
+
+    //Fiyat gecmisini grafik kutuphanesinin istedigi formata cevirme
+
+    this.chartData = {
+      labels: coin?.history.map((i) => new Date(i.date).toLocaleDateString()),
+      datasets: [
+        {
+          id: 1,
+          label: "Fiyat",
+          // borderColor: 'red',
+          // backgroundColor: 'yellow',
+          data: coin?.history.map((i) => i.priceUsd),
+        },
+      ],
+    };
   }
 
   //api'dan hem detay hem fiyat gecmisini alir
