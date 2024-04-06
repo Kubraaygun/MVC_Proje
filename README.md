@@ -37,7 +37,7 @@ API: https://docs.coincap.io/
 
 <h2>Ekran Görüntüsü</h2>
 
-![]()
+![](./public/coıngıf.gif)
 
 
 
