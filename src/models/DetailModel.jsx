@@ -56,11 +56,11 @@ export default class DetailModel {
   //api'dan hem detay hem fiyat gecmisini alir
   static async getCoin(id) {
     // detay verilerini al
-    const detailRes = await axios.get(`https://api.coincap.io/v2/assets/${id}`);
+    const detailRes = await axios.get(`${import.meta.env.VITE_API_KEY}${id}`);
 
     // fiyat geçmişini al
     const historyRes = await axios.get(
-      `https://api.coincap.io/v2/assets/${id}/history?interval=d1`
+      `${import.meta.env.VITE_API_KEY}${id}/history?interval=d1`
     );
 
     //Verileri fonksiyonun cagrildigi yere dondur
