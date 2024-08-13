@@ -11,7 +11,7 @@ export default class MainPageModel {
         }
     }
     try {
-      const res = await axios.get("https://api.coincap.io/v2/assets",options);
+      const res = await axios.get(import.meta.env.VITE_API_KEY,options);
 
       return res.data.data;
     } catch (err) {
